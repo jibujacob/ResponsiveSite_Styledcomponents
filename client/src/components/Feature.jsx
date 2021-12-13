@@ -13,6 +13,7 @@ const Left = styled.div`
 
 const Image = styled.img`
     width:80%; 
+    
 `
 
 const Right = styled.div`
