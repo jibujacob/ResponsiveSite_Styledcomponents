@@ -1,11 +1,14 @@
 import styled from "styled-components"
 import { css } from "styled-components";
 
+
 import { Feature } from "./components/Feature";
 import { Intro } from "./components/Intro";
 import { Navbar } from "./components/Navbar";
 import { Price } from "./components/Price";
 import { Service } from "./components/Service";
+import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 
 
 const Container = styled.div`
@@ -64,6 +67,10 @@ function App() {
       <Container>
         <Price/>
         <PriceShape/>
+      </Container>
+      <Container>
+        <Contact/>
+        <Footer/>
       </Container>
     </>
   );
