@@ -49,6 +49,7 @@ const PriceShape = styled.div`
 `
 
 function App() {
+  const isMobile = window.screen.width <= 480 ? true : false;
   return (
     <>
       <Container>
@@ -62,7 +63,7 @@ function App() {
       </Container>
       <Container>
         <Service/>
-        <ServiceShape/>
+        {!isMobile && <ServiceShape/>}
       </Container>
       <Container>
         <Price/>
