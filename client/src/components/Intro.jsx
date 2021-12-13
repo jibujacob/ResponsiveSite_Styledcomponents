@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { AnimatedShapes } from './AnimatedShapes'
 
 // import Woman from "../img/ "
 const Container = styled.div`
@@ -90,7 +91,8 @@ export const Intro = () => {
             <Right>
                 {/* <Image src ="https://s3.fintastico.com/media/images/e-transfer-payday-loans-canada-247-screenshot_6626.jpg"/>  */}
                 <Image src="https://global-uploads.webflow.com/60ad50e031bca6a32e7426f8/60ad50e031bca6de70742938_Web-Isolated-Woman.png" />
-            </Right>  
+            </Right>
+            <AnimatedShapes/>
         </Container>
     )
 }
