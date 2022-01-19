@@ -10,6 +10,23 @@ import { Service } from "./components/Service";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
+const Section = styled.div`
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  /* scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  > * {
+    width: 100%;
+    scroll-snap-align: start;
+  } */
+`
 
 const Container = styled.div`
   height:100vh;
@@ -51,29 +68,32 @@ const PriceShape = styled.div`
 function App() {
   const isMobile = window.screen.width <= 480 ? true : false;
   return (
-    <>
-      <Container>
+    
+      <Section>
+      <Container id="home">
         <Navbar/>
         <Intro/>
         <IntroShape/>
       </Container>
-      <Container>
-        <Feature/>
-        <FeatureShape/>
-      </Container>
-      <Container>
-        <Service/>
-        {!isMobile && <ServiceShape/>}
-      </Container>
-      <Container>
-        <Price/>
-        <PriceShape/>
-      </Container>
-      <Container>
-        <Contact/>
-        <Footer/>
-      </Container>
-    </>
+      
+        <Container id="features">
+          <Feature/>
+          <FeatureShape/>
+        </Container>
+        <Container id="services">
+          <Service/>
+          {!isMobile && <ServiceShape/>}
+        </Container>
+        <Container id="pricing">
+          <Price/>
+          <PriceShape/>
+        </Container>
+        <Container id="contact">
+          <Contact/>
+          <Footer/>
+        </Container>
+      </Section>
+    
   );
 }
 

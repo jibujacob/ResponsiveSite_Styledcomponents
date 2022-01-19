@@ -50,7 +50,10 @@ const Button = styled.button`
     border-radius:10px;
     cursor:pointer;
 `
-
+const Link = styled.a`
+    text-decoration:none;
+    color:inherit;
+`
 export const Navbar = () => {
     return (
         <Container>
@@ -58,11 +61,11 @@ export const Navbar = () => {
                 <Left>
                     <Logo>Agency</Logo>
                     <Menu>
-                        <MenuItem>Home</MenuItem>
-                        <MenuItem>Features</MenuItem>
-                        <MenuItem>Services</MenuItem>
-                        <MenuItem>Pricing</MenuItem>
-                        <MenuItem>Contact</MenuItem>
+                        <Link href="#home"><MenuItem>Home</MenuItem></Link> 
+                        <Link href="#features"><MenuItem>Features</MenuItem></Link> 
+                        <Link href="#services"><MenuItem>Services</MenuItem></Link>    
+                        <Link href="#pricing"><MenuItem>Pricing</MenuItem></Link>    
+                        <Link href="#contact"><MenuItem>Contact</MenuItem></Link>       
                     </Menu>
                 </Left> 
                 <Button>JOIN NOW</Button>
