@@ -103,7 +103,17 @@ const CloseButton = styled.button`
     border-radius:5px;
     border:none;
     right:5px;
-    top:30%;
+    top:-140px;
+    
+    @media only screen and (max-width:480px){
+        position:absolute;
+        background-color:white;
+        padding:5px;
+        border-radius:5px;
+        border:none;
+        right:5px;
+        top:30%;
+    }
 `
 
 export const Service = () => {
@@ -118,6 +128,7 @@ export const Service = () => {
                     loop
                     controls
                     src="https://player.vimeo.com/external/449759244.sd.mp4?s=d5f3da46ddc17aa69a7de84f1e420610ebd2a391&profile_id=139&oauth2_token_id=57447761"/>
+                {open && <CloseButton onClick={()=>setOpen(false)}>Close</CloseButton>}
             </Left>
             <Right>
                 <Wrapper>
